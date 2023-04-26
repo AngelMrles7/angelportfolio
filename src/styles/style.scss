@@ -1,0 +1,11 @@
+/*  *******  Settings  *******  */
+@use "./base/_settings.scss";
+@use "./base/_variables.scss";
+
+/*  ******* UI Components ******* */
+@use "./components/ui/_cardIcon.scss";
+
+/*  *******  Components  *******  */
+@use "./components/_navbar.scss";
+@use "./components/_home.scss";
+@use "./components/_about.scss";

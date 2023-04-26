@@ -1,0 +1,70 @@
+@use "../base/mixins";
+
+.section-home {
+  height: 100vh;
+  padding: 9rem 3rem;
+  @include mixins.flex(row, space-evenly, normal);
+  flex-grow: 1;
+  &__info {
+    &__title {
+      line-height: 1.6;
+      & span {
+        display: block;
+        font-size: 45px;
+        color: var(--neutral-color);
+        &:nth-child(3) {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &__btns {
+      padding-right: 50%;
+      & .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+        color: var(--main-color);
+        font-size: 1.4rem;
+        font-weight: 500;
+        border: 2px solid var(--main-color);
+        cursor: pointer;
+        transition: 0.3s ease all;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+
+        & span {
+          position: relative;
+          z-index: 2;
+          transition: 0.3s ease all;
+        }
+
+        &.download {
+          &:hover {
+            color: var(--neutral-color);
+          }
+          &::after {
+            content: "";
+            width: 119%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: calc(-100% - 40px);
+            border-bottom: 40px solid var(--main-color);
+            border-right: 40px solid transparent;
+            transition: 0.4s ease-in-out all;
+          }
+          &:hover::after {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
