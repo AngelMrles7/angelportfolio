@@ -3,9 +3,9 @@ import React from "react";
 const Contact = () => {
   return (
     <section className="section-contact">
-      <h2 className="section-contact__title">Contact me</h2>
-
       <div className="section-contact__form-box">
+        <h2 className="section-contact__title">Contact me</h2>
+
         <form className="section-contact__form">
           <div className="section-contact__form__input-box">
             <input type="text" name="name" required />
