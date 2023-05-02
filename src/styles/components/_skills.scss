@@ -1,0 +1,45 @@
+@use "../base/mixins";
+
+.skills-section {
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+  &__title {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 2rem;
+  }
+  &__content {
+    @include mixins.flex(row, space-around, flex-start);
+
+    & .technical-skills {
+      width: 45%;
+      &__title {
+        text-align: center;
+        color: var(--neutral-color);
+      }
+
+      &__icons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+        justify-items: center;
+        gap: 12px;
+      }
+    }
+
+    & .soft-skills {
+      width: 45%;
+      &__title {
+        text-align: center;
+        color: var(--neutral-color);
+      }
+
+      &__icons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+        justify-items: center;
+        gap: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.button-panel {
+  position: fixed;
+  z-index: 999;
+  width: 4rem;
+  height: 4rem;
+  bottom: 1vh;
+  right: 1vw;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transform: translate(-50%, -50%);
+
+  &:before,
+  &:after,
+  & span {
+    background: var(--neutral-color);
+    content: "";
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+  }
+
+  &.is-active {
+    &:before {
+      transform: translateY(12px) rotate(135deg);
+    }
+    &:after {
+      transform: translateY(-12px) rotate(-135deg);
+    }
+    & span {
+      transform: scale(0);
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .button-panel {
+    display: none;
+  }
+}
