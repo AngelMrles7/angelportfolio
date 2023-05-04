@@ -23,22 +23,35 @@ const Slider = () => {
           rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 2.5,
+          modifier: 2,
+          slideShadows: true,
         }}
         pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
+        modules={[EffectCoverflow, Pagination]}
       >
         <SwiperSlide>
           <img
-            className="slider-item slider-item__1"
             src="https://media.istockphoto.com/id/1438674720/es/foto/hombre-de-negocios-dedo-t%C3%A1ctil-pantalla-virtual-nft-token-digital-crypto-art-blockchain.jpg?s=612x612&w=0&k=20&c=ONu7dBX2DXhr4OMZb4FIJhQL0i9dotHKpGUNL1nKjDY="
             alt=""
           />
+          <div className="swiper-slide__content">
+            <h4 className="swiper-slide__content__title">Repositorio</h4>
+            <p className="swiper-slide__content__description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+              incidunt corporis error labore ipsam distinctio ab eum similique
+              dolore impedit. Recusandae nisi nulla in deleniti fugit numquam
+              molestias quia iste?
+            </p>
+
+            <a
+              href="https://github.com/AngelMrles7"
+              className="swiper-slide__content__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See
+            </a>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img
