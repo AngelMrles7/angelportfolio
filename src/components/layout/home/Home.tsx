@@ -6,7 +6,7 @@ const Home = () => {
     <section className="home-section" id="home">
       <div className="home-section__info">
         <h1 className="home-section__info__title">
-          <Fade cascade damping={1} triggerOnce={true}>
+          <Fade cascade damping={1} triggerOnce={true} fraction={0.1}>
             <span>Hello! 👋</span>
             <span className="css-1c2fuzs--effect-text">I'm Angel Morales</span>
             <span className="css-1c2fuzs__font-size">Web developer</span>

@@ -3,8 +3,12 @@
   width: 90px;
   height: auto;
   padding: 6px 5px;
-  background-color: var(--main-color);
-  border-radius: 5px;
+  background: var(--main-color-faded);
+  backdrop-filter: blur(19.5px);
+  -webkit-backdrop-filter: blur(19.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
   @include mixins.flex(column, space-evenly, center);
   transition: 0.3s ease-in-out;
 
@@ -29,5 +33,6 @@
 
   &:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 32px 0 rgba(120, 117, 255, 0.1);
   }
 }

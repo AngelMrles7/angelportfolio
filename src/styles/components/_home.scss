@@ -1,6 +1,7 @@
 @use "../base/mixins";
 
 .home-section {
+  width: 100%;
   min-height: 100vh;
   padding: 9rem 3rem;
   @include mixins.flex(row, space-evenly, normal);
@@ -40,7 +41,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 160px;
         height: 40px;
         background-color: transparent;
         color: var(--main-color);
@@ -71,11 +72,11 @@
           }
           &::after {
             content: "";
-            width: 119%;
+            width: 150%;
             position: absolute;
             z-index: 1;
             top: 0;
-            left: calc(-100% - 40px);
+            left: calc(-100% - 80px);
             border-bottom: 40px solid var(--main-color);
             border-right: 40px solid transparent;
             transition: 0.4s ease-in-out all;
