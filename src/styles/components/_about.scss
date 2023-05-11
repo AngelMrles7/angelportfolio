@@ -1,11 +1,12 @@
 @use "../base/mixins";
 
-.section-about {
+.about-section {
   width: 100%;
-  height: 100vh;
-  padding: 0 20px;
+  min-height: 90vh;
+  padding: 2.1rem 1.2rem;
 
   &__title {
+    margin-bottom: 2rem;
     text-align: center;
     color: var(--main-color);
     font-size: 2rem;
@@ -13,18 +14,47 @@
 
   &__content {
     @include mixins.flex(row, space-between, flex-start);
-    & p {
+
+    &__box-text {
       width: 50%;
+      padding: 10px 5px;
       font-size: 1rem;
       text-align: justify;
       color: var(--neutral-color);
     }
     & .hobbies {
       width: 50%;
+      margin-left: 20px;
       & h3 {
+        margin: 0 0 20px 0;
         text-align: center;
         font-size: 1.5rem;
-        color: var(--main-color);
+        color: var(--neutral-color);
+      }
+      &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+        grid-template-rows: auto;
+        justify-items: center;
+        gap: 20px 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about-section {
+    &__content {
+      @include mixins.flex(column, space-between, center);
+      gap: 40px;
+
+      &__box-text {
+        width: 100%;
+      }
+
+      & .hobbies {
+        width: 100%;
+        margin-left: 0px;
       }
     }
   }
