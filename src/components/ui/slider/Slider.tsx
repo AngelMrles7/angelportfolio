@@ -1,6 +1,6 @@
 import React from "react";
 // import Swiper core and required modules
-import { Navigation, Pagination, EffectCoverflow } from "swiper";
+import { Pagination, EffectCoverflow, Autoplay } from "swiper";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -16,8 +16,6 @@ const Slider = () => {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        loop={true}
-        spaceBetween={0}
         slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,
@@ -26,12 +24,16 @@ const Slider = () => {
           modifier: 2,
           slideShadows: true,
         }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        modules={[EffectCoverflow, Pagination]}
+        autoplay={{
+          delay: 8000,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true }}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
       >
         <SwiperSlide>
           <img
-            src="https://media.istockphoto.com/id/1438674720/es/foto/hombre-de-negocios-dedo-t%C3%A1ctil-pantalla-virtual-nft-token-digital-crypto-art-blockchain.jpg?s=612x612&w=0&k=20&c=ONu7dBX2DXhr4OMZb4FIJhQL0i9dotHKpGUNL1nKjDY="
+            src="https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
           />
           <div className="swiper-slide__content">
@@ -70,7 +72,7 @@ const Slider = () => {
         <SwiperSlide>
           <img
             className="slider-item slider-item__4"
-            src="https://media.istockphoto.com/id/1427937313/es/vector/la-ia-en-los-tel%C3%A9fonos-asiste-a-las-comunicaciones-con-la-infraestructura-de-la-ciudad.jpg?s=612x612&w=0&k=20&c=U9UGTW07Fi3Y5O2Om1P-8ozCq0zhwLhUe6tt7TtWmEg="
+            src="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt=""
           />
         </SwiperSlide>

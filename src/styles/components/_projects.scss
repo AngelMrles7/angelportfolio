@@ -1,11 +1,12 @@
-.section-projects {
+.projects-section {
   width: 100%;
-  height: 100vh;
-  padding: 0 20px;
+  min-height: 80vh;
+  padding: 2.1rem 1.2rem;
 
   &__title {
+    margin-bottom: 2rem;
     text-align: center;
-    color: var(--main-color);
+    color: var(--primary-color);
     font-size: 2rem;
   }
 }
