@@ -15,7 +15,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: var(--second-color);
+  background-color: var(--dark-color);
   padding-left: 10rem;
 }
 
@@ -44,4 +44,11 @@ hr,
 p,
 pre {
   margin: 0;
+}
+
+/*  ******* Responsive *******  */
+@media (max-width: 750px) {
+  body {
+    padding-left: 0;
+  }
 }
