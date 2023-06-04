@@ -2,8 +2,10 @@
 
 .skills-section {
   width: 100%;
+  max-width: 1200px;
   min-height: 90vh;
-  padding: 2.1rem 1.2rem;
+  padding: 2.1rem 2rem;
+  overflow-x: hidden;
 
   &__title {
     margin-bottom: 2rem;
@@ -12,15 +14,20 @@
     font-size: 2rem;
   }
   &__content {
-    @include mixins.flex(row, space-around, flex-start);
+    @include mixins.flex(row, space-between, flex-start);
 
     & > div {
       width: 45%;
+
       & .technical-skills {
         &__title {
           margin-bottom: 1.2rem;
           text-align: center;
           color: var(--light-color);
+
+          body.light & {
+            color: var(--secondary-color);
+          }
         }
 
         &__icons {
@@ -39,6 +46,9 @@
           margin-bottom: 1.2rem;
           text-align: center;
           color: var(--light-color);
+          body.light & {
+            color: var(--secondary-color);
+          }
         }
 
         &__icons {
@@ -63,5 +73,18 @@
         width: 100%;
       }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .skills-section {
+    padding: 2.1rem 0.2rem;
   }
 }

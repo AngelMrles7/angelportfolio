@@ -2,34 +2,45 @@
 
 .about-section {
   width: 100%;
+
   min-height: 90vh;
-  padding: 2.1rem 1.2rem;
+  padding: 2.1rem 2rem;
 
   &__title {
     margin-bottom: 2rem;
     text-align: center;
-    color: var(--main-color);
-    font-size: 2rem;
+    color: var(--primary-color);
+    font-size: 2.2rem;
   }
 
   &__content {
     @include mixins.flex(row, space-between, flex-start);
+    gap: 30px;
 
-    &__box-text {
+    &__card {
       width: 50%;
-      padding: 10px 5px;
+      padding: 10px 12px;
       font-size: 1rem;
       text-align: justify;
-      color: var(--neutral-color);
+      color: var(--light-color);
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -o-pre-wrap;
+      body.light & {
+        color: var(--secondary-color);
+      }
     }
     & .hobbies {
       width: 50%;
-      margin-left: 20px;
+
       & h3 {
         margin: 0 0 20px 0;
         text-align: center;
         font-size: 1.5rem;
-        color: var(--neutral-color);
+        color: var(--light-color);
+        body.light & {
+          color: var(--secondary-color);
+        }
       }
       &__content {
         display: grid;
@@ -48,7 +59,7 @@
       @include mixins.flex(column, space-between, center);
       gap: 40px;
 
-      &__box-text {
+      &__card {
         width: 100%;
       }
 
@@ -57,5 +68,18 @@
         margin-left: 0px;
       }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .about-section {
+    padding: 2.1rem 0.2rem;
   }
 }

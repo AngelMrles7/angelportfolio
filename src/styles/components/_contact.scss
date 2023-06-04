@@ -3,20 +3,25 @@
 .contact-section {
   @include mixins.flex(row, space-around, center);
   width: 100%;
+  max-width: 1200px;
   min-height: 100vh;
-  padding: 2.1rem 1.2rem;
+  padding: 2.1rem 2rem;
 
   &__form-box {
     width: 600px;
-    padding: 35px 30px;
-    background-color: var(--second-color-contrast);
+    padding: 35px 20px;
+    background-color: transparent;
     border-radius: 12px;
+    border: 1px solid var(--dark-color-faded);
+    body.light & {
+      background-color: var(--secondary-color);
+    }
   }
 
   &__title {
     margin: 0 0 30px 0;
     text-align: center;
-    color: var(--main-color);
+    color: var(--primary-color);
     font-size: 2rem;
   }
 
@@ -30,10 +35,8 @@
     & :nth-child(3) {
       grid-column: span 2;
     }
+
     & :nth-child(4) {
-      grid-column: span 2;
-    }
-    & :nth-child(5) {
       grid-column: span 2;
       display: flex;
       justify-content: space-around;
@@ -46,7 +49,7 @@
         width: 100%;
         padding: 10px;
         border: 1px solid rgba(255, 255, 255, 0.25);
-        background: var(--second-color);
+        background: transparent;
         border-radius: 5px;
         outline: none;
         color: #fff;
@@ -59,24 +62,32 @@
         padding: 7px 15px;
         pointer-events: none;
         font-size: 1em;
-        color: var(--main-color);
+        color: var(--primary-color);
         text-transform: uppercase;
         transition: 0.3s;
       }
 
-      & input:valid ~ label,
-      & input:focus ~ label {
-        color: var(--main-color);
+      & input:valid + label,
+      input:focus + label,
+      input[type="email"].invalid + label {
+        color: var(--primary-color);
         transform: translateX(10px) translateY(-7px);
         font-size: 0.65em;
         padding: 0 6px;
-        background: var(--second-color);
+        background: var(--secondary-color);
         letter-spacing: 0.2em;
       }
 
       & input:valid,
-      & input:focus {
-        border: 1px solid var(--main-color);
+      input:focus {
+        border: 1px solid var(--primary-color);
+      }
+
+      /* input validation style  */
+      &.invalid {
+        & input {
+          border-color: var(--invalid-color);
+        }
       }
     }
 
@@ -88,7 +99,7 @@
         min-height: 150px;
         padding: 10px;
         border: 1px solid rgba(255, 255, 255, 0.25);
-        background: var(--second-color);
+        background: transparent;
         border-radius: 5px;
         outline: none;
         color: #fff;
@@ -98,12 +109,38 @@
         resize: none;
 
         &:focus {
-          border: 1px solid var(--main-color);
+          border: 1px solid var(--primary-color);
         }
         &::placeholder {
           font-size: 1rem;
-          color: var(--main-color);
+          color: var(--primary-color);
         }
+      }
+
+      /* input validation style  */
+      &.invalid {
+        & textarea {
+          border-color: var(--invalid-color);
+        }
+      }
+    }
+
+    /* input validation style  */
+    .error-msg {
+      margin-top: 2px;
+      color: var(--light-color);
+      font-size: 0.8rem;
+      text-align: right;
+      font-weight: normal;
+      display: flex;
+
+      & span {
+        color: var(--invalid-color);
+        font-size: 1.3rem;
+        text-align: center;
+        margin-top: -2px;
+        margin-right: 4px;
+        height: 16px;
       }
     }
 
@@ -117,7 +154,7 @@
         height: 40px;
         border: 1px solid rgba(255, 255, 255, 0.25);
         background-color: transparent;
-        color: var(--main-color);
+        color: var(--primary-color);
         font-size: 1rem;
         font-weight: 500;
         cursor: pointer;
@@ -127,9 +164,13 @@
         overflow: hidden;
         padding: 0;
 
+        body.light & {
+          color: var(--light-color);
+        }
+
         &:active {
           transform: translateY(4px);
-          box-shadow: 0px 1px 0px var(--neutral-color);
+          box-shadow: 0px 1px 0px var(--light-color);
         }
         &.btn-send {
           & svg {
@@ -142,7 +183,7 @@
             & rect {
               width: 100%;
               height: 100%;
-              stroke: var(--main-color);
+              stroke: var(--primary-color);
               stroke-width: 4px;
               stroke-dasharray: 1000;
               stroke-dashoffset: 1000;
@@ -155,5 +196,33 @@
         }
       }
     }
+  }
+}
+
+/*  ******* Responsive *******  */
+
+@media (max-width: 600px) {
+  .contact-section {
+    &__form {
+      & :nth-child(1) {
+        grid-column: span 2;
+      }
+      & :nth-child(2) {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-section {
+    padding: 2.1rem 1rem;
   }
 }

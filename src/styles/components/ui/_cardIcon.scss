@@ -3,7 +3,7 @@
   width: 90px;
   height: auto;
   padding: 6px 5px;
-  background: var(--main-color-faded);
+  background: var(--secondary-color);
   backdrop-filter: blur(19.5px);
   -webkit-backdrop-filter: blur(19.5px);
   border-radius: 10px;
@@ -15,7 +15,7 @@
   &__wrap-icon {
     width: 100%;
     text-align: center;
-    color: var(--neutral-color);
+    color: var(--light-color);
     & > svg {
       width: 30px;
       height: 30px;
@@ -28,7 +28,7 @@
     font-size: 0.8rem;
     text-align: center;
     word-wrap: break-word;
-    color: var(--neutral-color);
+    color: var(--light-color);
   }
 
   &:hover {
