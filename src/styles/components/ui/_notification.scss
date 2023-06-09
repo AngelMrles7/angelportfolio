@@ -1,0 +1,63 @@
+@use "../../base/mixins";
+
+.notification {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 70px;
+  background-color: var(--light-color);
+  border-radius: 6px;
+  box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.5);
+  transform: translate(0, -110%);
+  transition: 0.3s ease-out;
+
+  &.is-success {
+    transform: translate(0, 0);
+
+    & .notification__wrap {
+      &::after {
+        animation: loading 3s linear none;
+      }
+    }
+  }
+
+  &__wrap {
+    @include mixins.flex(row, space-between, center);
+    height: 100%;
+    padding: 0 10px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 5px;
+      border-radius: 0 0 6px 6px;
+      background-color: green;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 37px;
+    color: green;
+  }
+
+  &__message {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font-poppins);
+    color: var(--secondary-color);
+  }
+}
+
+@keyframes loading {
+  100% {
+    width: 100%;
+  }
+}
