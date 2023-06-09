@@ -30,36 +30,7 @@ export const es: TranslationInterface = {
     },
     projects: {
       title: "Proyectos",
-      firstProject: {
-        title: "E-commerce",
-        description:
-          "Este proyecto fue elavorado utilizando las html, css, react y Laravel.",
-        imgLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        projectLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        linkText: "See code",
-      },
-      secondProject: {
-        title: "E-commerce",
-        description:
-          "Este proyecto fue elavorado utilizando las html, css, react y Laravel.",
-        imgLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        projectLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        linkText: "See code",
-      },
-      thirdProject: {
-        title: "E-commerce",
-        description:
-          "Este proyecto fue elavorado utilizando las html, css, react y Laravel.",
-        imgLink:
-          "https://pixabay.com/link/?ua=cd3%3Dimage%26cd7%3Des%253Aprogramming%253ACOL%26ec%3Dapi_ad%26ea%3Dnavigate%26el%3Dgetty%26tid%3DUA-20223345-1%26dr%3Dhttps%253A%252F%252Fpixabay.com%252Fes%252Fimages%252Fsearch%252Fprograming%252F&sp=%2524%3Dadvertisement_clicked%26action%3Dnavigate%26ad_partner%3Dgetty%26ad_content%3Dapi_ad%26ad_type%3D%26media_type%3Dimage%26media_id%3D&next=https%3A%2F%2Fwww.istockphoto.com%2Fphoto%2Ffemale-it-developer-at-workplace-gm1255905237-367553319%3Futm_source%3Dpixabay%26utm_medium%3Daffiliate%26utm_campaign%3DSRP_image_sponsored%26utm_content%3Dhttps%253A%252F%252Fpixabay.com%252Fes%252Fimages%252Fsearch%252Fprogramming%252F%26utm_term%3Dprogramming&hash=0711e7ec4b337e393acd4de3f8ce7927c1cfd0a5&=",
-        projectLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        linkText: "See code",
-      },
+      // Projects
     },
     contact: {
       title: "Contáctame",

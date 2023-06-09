@@ -35,9 +35,6 @@ interface Sections {
   };
   projects: {
     title: string;
-    firstProject: ProjectInterface;
-    secondProject: ProjectInterface;
-    thirdProject: ProjectInterface;
   };
   contact: {
     title: string;

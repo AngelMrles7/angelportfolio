@@ -1,4 +1,3 @@
-import React from "react";
 import CardIcon from "../../ui/CardIcon";
 import {
   FaHtml5,
@@ -14,23 +13,28 @@ import {
   FaUsers,
   FaRegComments,
   FaWrench,
+  FaSitemap,
+  FaRetweet,
 } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
 
+import { useLanguage } from "../../../hooks/useLanguage";
+
 const Skills = () => {
+  const {
+    language: { sections },
+  } = useLanguage();
   return (
     <section className="skills-section" id="skills">
-      <h2 className="skills-section__title">My Skills</h2>
+      <h2 className="skills-section__title">{sections.skills.title}</h2>
       <div className="skills-section__content">
-        <Fade
-          direction="left"
-          triggerOnce={true}
-          fraction={0.2}
-          childClassName="technical-skills"
-        >
-          <div>
-            <h3 className="technical-skills__title">Technical skills</h3>
+        <Fade direction="left" triggerOnce={true}>
+          <div className="technical-skills">
+            <h3 className="technical-skills__title">
+              {sections.skills.technicalTitle}
+            </h3>
             <div className="technical-skills__icons">
+              {/* skill icons */}
               <CardIcon icon={<FaHtml5 />} about="HTML" />
               <CardIcon icon={<FaCss3Alt />} about="CSS" />
               <CardIcon icon={<FaJs />} about="JS" />
@@ -44,13 +48,17 @@ const Skills = () => {
             </div>
           </div>
         </Fade>
-        <Fade direction="top-right" triggerOnce={true} fraction={0.2}>
+        <Fade direction="right" triggerOnce={true}>
           <div className="soft-skills">
-            <h3 className="soft-skills__title">Soft skills</h3>
+            <h3 className="soft-skills__title">{sections.skills.softTitle}</h3>
             <div className="soft-skills__icons">
+              {/* skill icons */}
               <CardIcon icon={<FaUsers />} about="Teamwork" />
               <CardIcon icon={<FaRegComments />} about="Communication" />
-              <CardIcon icon={<FaWrench />} about="Problem solving " />
+
+              <CardIcon icon={<FaWrench />} about="Problem solving" />
+              <CardIcon icon={<FaSitemap />} about="Organizational" />
+              <CardIcon icon={<FaRetweet />} about="Adaptability" />
             </div>
           </div>
         </Fade>

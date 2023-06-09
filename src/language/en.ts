@@ -32,35 +32,7 @@ export const en: TranslationInterface = {
     },
     projects: {
       title: "Projects",
-      firstProject: {
-        title: "Acerca de mi",
-        description: "Projects",
-        imgLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        projectLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        linkText: "See code",
-      },
-      secondProject: {
-        title: "E-commerce",
-        description:
-          "Este proyecto fue elavorado utilizando las html, css, react y Laravel.",
-        imgLink:
-          "https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_640.jpg",
-        projectLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        linkText: "See code",
-      },
-      thirdProject: {
-        title: "E-commerce",
-        description:
-          "Este proyecto fue elavorado utilizando las html, css, react y Laravel.",
-        imgLink:
-          "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg",
-        projectLink:
-          "https://images.pexels.com/photos/15372904/pexels-photo-15372904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        linkText: "See code",
-      },
+      // Projects
     },
     contact: {
       title: "Contact me",

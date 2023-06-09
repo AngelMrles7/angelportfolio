@@ -21,6 +21,12 @@
         font-size: 45px;
         color: var(--light-color);
 
+        & .hand-icon {
+          width: fit-content;
+          height: 50px;
+          margin-left: 10px;
+        }
+
         & .gradient-text-effect {
           background: linear-gradient(
             -45deg,
@@ -49,12 +55,12 @@
     &__btns {
       padding-right: 50%;
 
-      & .button {
+      & .download-button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 160px;
-        height: 40px;
+        width: 175px;
+        height: 45px;
         background-color: transparent;
         color: var(--primary-color);
         font-size: 1.4rem;
@@ -65,7 +71,8 @@
         border-radius: 5px;
         position: relative;
         overflow: hidden;
-        padding: 0;
+        padding: 5px;
+        text-decoration: none;
 
         &:active {
           transform: translateY(4px);
@@ -78,24 +85,24 @@
           transition: 0.3s ease all;
         }
 
-        &.download {
-          &:hover {
-            color: var(--light-color);
-          }
-          &::after {
-            content: "";
-            width: 150%;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: calc(-100% - 80px);
-            border-bottom: 40px solid var(--primary-color);
-            border-right: 40px solid transparent;
-            transition: 0.4s ease-in-out all;
-          }
-          &:hover::after {
-            left: 0;
-          }
+        &:hover {
+          color: var(--light-color);
+        }
+
+        &::after {
+          content: "";
+          width: 150%;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: calc(-100% - 80px);
+          border-bottom: 50px solid var(--primary-color);
+          border-right: 50px solid transparent;
+          transition: 0.4s ease-in-out all;
+        }
+
+        &:hover::after {
+          left: 0;
         }
       }
     }

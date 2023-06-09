@@ -13,10 +13,11 @@
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   border-right: 1px solid var(--dark-color-faded);
+  transition: all 0.5s;
 
   body.light & {
-    border-color: aliceblue;
-    background-color: var(--dark-color-faded);
+    border-color: rgba(255, 255, 255, 0.446);
+    background-color: var(--secondary-color);
   }
 
   &__logo {
