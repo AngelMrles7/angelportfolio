@@ -41,7 +41,7 @@ const Skills = () => {
               <CardIcon icon={<FaReact />} about="React Js" />
               <CardIcon icon={<FaSass />} about="Sass" />
               <CardIcon icon={<FaLaravel />} about="Laravel" />
-              <CardIcon icon={<FaDatabase />} about="My SQL" />
+              <CardIcon icon={<FaDatabase />} about="SQL" />
               <CardIcon icon={<FaGitAlt />} about="Git" />
               <CardIcon icon={<FaGithub />} about="Github" />
               <CardIcon icon={<FaFigma />} about="Figma" />

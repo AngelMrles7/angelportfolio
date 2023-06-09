@@ -20,7 +20,7 @@ export const es: TranslationInterface = {
     about: {
       title: "Acerca de mi",
       information:
-        "¡Hola!  Mi nombre es Angel Morales, tengo 22 años. Soy tecnólogo en análisis y desarrollo de sistemas de información, enfocado en el desarrollo Front-end, aunque también poseo conocimientos en el ámbito del back-end. \n\nMe caracterizo por ser una persona organizada y responsable, disfruto trabajar en equipo para lograr resultados sobresalientes. Mi actitud colaborativa me permite aportar ideas frescas y creativas, fomentando un ambiente de trabajo positivo y productivo. Además, soy un solucionador de problemas y un aprendiz continuo, siempre busco superar mis propios límites, me encanta enfrentarme a retos. \n\nMe entusiasma encontrar nuevas oportunidades que me permitan crecer tanto personal como profesionalmente.",
+        "¡Hola! Mi nombre es Angel Morales, tengo 22 años. Soy tecnólogo en análisis y desarrollo de sistemas de información, enfocado en el desarrollo Front-end, aunque también poseo conocimientos en el ámbito del back-end. \n\nMe caracterizo por ser una persona organizada y responsable, disfruto trabajar en equipo para lograr resultados sobresalientes. Mi actitud colaborativa me permite aportar ideas frescas y creativas, fomentando un ambiente de trabajo positivo y productivo. Además, me gusta resolver problemas y aprender de forma continua, siempre buscando superar mis propios límites. \n\nMe entusiasma encontrar nuevas oportunidades que me permitan crecer tanto personal como profesionalmente.",
       subtitle: "Mis hobbies",
     },
     skills: {
