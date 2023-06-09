@@ -1,4 +1,4 @@
-import { Translation } from "./TranslationsInterface";
+import { TranslationInterface } from "./TranslationsInterface";
 
 export type LanguageState = string | "en" | "es";
 
@@ -10,5 +10,5 @@ export type LanguageAction = {
 export type LanguageContextProps = {
   languageState: LanguageState;
   toggleLanguage: () => void;
-  language: Translation;
+  language: TranslationInterface;
 };

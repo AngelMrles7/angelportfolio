@@ -2,20 +2,19 @@ import { useEffect, useReducer, useState } from "react";
 import LanguageContext from "./LanguageContext";
 import { LanguageReducer } from "./LanguageReducer";
 import { LanguageState } from "../../interface/LanguageInterface";
-import { translations } from "../../language/translations";
-import { TranslationsInterface } from "../../interface/TranslationsInterface";
+import { en } from "../../language/en";
+import { es } from "../../language/es";
 
 interface LanguageStateProps {
   children: JSX.Element | JSX.Element[];
 }
 
 const INITIAL_STATE: LanguageState = localStorage.getItem("language") || "es";
+
 export const LanguageProvider = ({ children }: LanguageStateProps) => {
   const [languageState, dispatch] = useReducer(LanguageReducer, INITIAL_STATE);
 
-  const [language, setLanguage] = useState(
-    translations[languageState as keyof TranslationsInterface]
-  );
+  const [language, setLanguage] = useState(es);
 
   const toggleLanguage = () => {
     dispatch({ type: "TOGGLE_LANGUAGE", payload: "en" });
@@ -23,7 +22,7 @@ export const LanguageProvider = ({ children }: LanguageStateProps) => {
 
   useEffect(() => {
     localStorage.setItem("language", languageState);
-    setLanguage(translations[languageState as keyof TranslationsInterface]);
+    setLanguage(languageState === "en" ? en : es);
   }, [languageState]);
 
   return (

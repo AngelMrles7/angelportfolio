@@ -6,6 +6,14 @@ interface Navigation {
   contact: string;
 }
 
+export interface ProjectInterface {
+  title: string;
+  imgLink: string;
+  description: string;
+  projectLink?: string;
+  linkText?: string;
+}
+
 interface Sections {
   home: {
     title: {
@@ -27,11 +35,9 @@ interface Sections {
   };
   projects: {
     title: string;
-    "first-proyect": {
-      title: string;
-      description: string;
-      btnLink: string;
-    };
+    firstProject: ProjectInterface;
+    secondProject: ProjectInterface;
+    thirdProject: ProjectInterface;
   };
   contact: {
     title: string;
@@ -53,13 +59,8 @@ export interface FormValidation {
   };
 }
 
-export interface Translation {
+export interface TranslationInterface {
   navigation: Navigation;
   sections: Sections;
   formValidation: FormValidation;
-}
-
-export interface TranslationsInterface {
-  es: Translation;
-  en: Translation;
 }
