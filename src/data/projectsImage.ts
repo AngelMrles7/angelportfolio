@@ -5,6 +5,6 @@ import firstProjectImg from "../assets/products-img/screen-ecommerce-laravel.png
 export const projectsData = {
   firstProjects: {
     projectImage: firstProjectImg,
-    // projectLink: "https://github.com/AngelMrles7/jadma_store",
+    projectLink: "https://github.com/AngelMrles7/jadma_store",
   },
 };
