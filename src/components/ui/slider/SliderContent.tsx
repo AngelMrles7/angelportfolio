@@ -1,16 +1,24 @@
 import { FC } from "react";
 import { ProjectInterface } from "../../../interface/TranslationsInterface";
 
-export const SliderContent: FC<ProjectInterface> = ({
-  title,
-  description,
-  imgLink,
-  projectLink,
-  linkText,
+interface SliderContentProps {
+  projectsInfo: ProjectInterface;
+  projectData: {
+    projectLink?: string;
+    projectImage: string;
+  };
+}
+
+export const SliderContent: FC<SliderContentProps> = ({
+  projectData,
+  projectsInfo,
 }) => {
+  const { title, description, linkText } = projectsInfo;
+  const { projectImage, projectLink } = projectData;
+
   return (
     <>
-      <img src={imgLink} alt={description} />
+      <img src={projectImage} alt={description} />
       <div className="swiper-slide__content">
         <h4 className="swiper-slide__content__title">{title}</h4>
         <p className="swiper-slide__content__description">{description}</p>

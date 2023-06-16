@@ -8,9 +8,7 @@ interface Navigation {
 
 export interface ProjectInterface {
   title: string;
-  imgLink: string;
   description: string;
-  projectLink?: string;
   linkText?: string;
 }
 
@@ -35,6 +33,7 @@ interface Sections {
   };
   projects: {
     title: string;
+    projectsInfo: ProjectInterface[];
   };
   contact: {
     title: string;

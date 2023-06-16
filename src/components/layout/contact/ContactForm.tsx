@@ -1,5 +1,5 @@
 import { useForm } from "../../../hooks/useForm";
-import { validationsForm } from "../../../helpers/helpValidationForm";
+import { validationsForm } from "../../../utils/validationForm";
 import { InitialForm } from "../../../interface/FormInterface";
 import { useLanguage } from "../../../hooks/useLanguage";
 import { NotificationMessage } from "../../ui/NotificationMessage";

@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import { useLanguage } from "../../../hooks/useLanguage";
 import { SliderContent } from "./SliderContent";
+import { projectsData } from "../../../data/projectsImage";
 
 const Slider = () => {
   const {
@@ -40,7 +41,15 @@ const Slider = () => {
         modules={[EffectCoverflow, Pagination, Autoplay]}
       >
         {/* Projects Content */}
-
+        {/* The SliderContent component must be wrapped in a SwiperSlide
+        component. */}
+        <SwiperSlide>
+          <SliderContent
+            key={1}
+            projectData={projectsData.firstProjects}
+            projectsInfo={projects.projectsInfo?.[0]}
+          />
+        </SwiperSlide>
         <div className="slider-controler">
           <div className="swiper-pagination"></div>
         </div>

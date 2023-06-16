@@ -30,7 +30,15 @@ export const es: TranslationInterface = {
     },
     projects: {
       title: "Proyectos",
-      // Projects
+      // Include the information of each project
+      projectsInfo: [
+        {
+          title: "E-commerce",
+          description:
+            "Consiste en una plataforma de venta de productos tecnológicos en línea. \n\nLa página web fue desarrollada utilizando herramientas como HTML5,Bootstrap, JavaScript, Laravel y MySQL.",
+          linkText: "Ver codigo",
+        },
+      ],
     },
     contact: {
       title: "Contáctame",

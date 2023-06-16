@@ -12,6 +12,7 @@
     justify-content: end;
     align-items: self-start;
     overflow: hidden;
+    cursor: grab;
 
     &-active {
       filter: blur(0px);
@@ -42,11 +43,13 @@
 
       &__description {
         margin: 0 0 20px 0;
-        text-align: justify;
         font-family: var(--font-poppins);
         font-size: 1rem;
         font-weight: 400;
         color: var(--light-color);
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
       }
 
       &__link {

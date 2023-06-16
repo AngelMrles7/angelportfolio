@@ -32,7 +32,14 @@ export const en: TranslationInterface = {
     },
     projects: {
       title: "Projects",
-      // Projects
+      // include the information of each project
+      projectsInfo: [
+        {
+          title: "E-commerce",
+          description:
+            "It consists of a platform for selling technology products online. \n\nThe website was developed using tools such as HTML5, Bootstrap, JavaScript, Laravel and MySQL.",
+        },
+      ],
     },
     contact: {
       title: "Contact me",
