@@ -17,6 +17,7 @@ import {
   FaRetweet,
 } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
+import { SiTypescript } from "react-icons/si";
 
 import { useLanguage } from "../../../hooks/useLanguage";
 
@@ -38,6 +39,7 @@ const Skills = () => {
               <CardIcon icon={<FaHtml5 />} about="HTML" />
               <CardIcon icon={<FaCss3Alt />} about="CSS" />
               <CardIcon icon={<FaJs />} about="JS" />
+              <CardIcon icon={<SiTypescript />} about="TS" />
               <CardIcon icon={<FaReact />} about="React Js" />
               <CardIcon icon={<FaSass />} about="Sass" />
               <CardIcon icon={<FaLaravel />} about="Laravel" />

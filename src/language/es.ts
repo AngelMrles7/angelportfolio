@@ -38,6 +38,12 @@ export const es: TranslationInterface = {
             "Consiste en una plataforma de venta de productos tecnológicos en línea. \n\nLa página web fue desarrollada utilizando herramientas como HTML5,Bootstrap, JavaScript, Laravel y MySQL.",
           linkText: "Ver codigo",
         },
+        {
+          title: "E-commerce",
+          description:
+            "Consiste en una plataforma de ventas de productos en línea. \n\nLa página web está actualmente en desarrollo, donde se están utilizando tecnologías como HTML 5, CSS 3, Sass, React js, TypeScript, Laravel 10 y MySQL.",
+          linkText: "Ver codigo",
+        },
       ],
     },
     contact: {

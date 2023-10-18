@@ -40,6 +40,12 @@ export const en: TranslationInterface = {
             "It consists of a platform for selling technology products online. \n\nThe website was developed using tools such as HTML5, Bootstrap, JavaScript, Laravel and MySQL.",
           linkText: "See code",
         },
+        {
+          title: "E-commerce",
+          description:
+            "It's a platform for online product sales. \n\nThe website is currently under development, using technologies such as HTML 5, CSS 3, Sass, React js, TypeScript, Laravel 10, and MySQL.",
+          linkText: "See code",
+        },
       ],
     },
     contact: {

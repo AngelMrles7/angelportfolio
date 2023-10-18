@@ -43,11 +43,19 @@ const Slider = () => {
         {/* Projects Content */}
         {/* The SliderContent component must be wrapped in a SwiperSlide
         component. */}
+
         <SwiperSlide>
           <SliderContent
             key={1}
             projectData={projectsData.firstProjects}
             projectsInfo={projects.projectsInfo?.[0]}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <SliderContent
+            key={2}
+            projectData={projectsData.secondProjects}
+            projectsInfo={projects.projectsInfo?.[1]}
           />
         </SwiperSlide>
         <div className="slider-controler">

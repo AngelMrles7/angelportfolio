@@ -2,8 +2,8 @@ import { useLanguage } from "../../../hooks/useLanguage";
 import { Fade } from "react-awesome-reveal";
 import image from "../../../assets/image-fon.svg";
 import hand from "../../../assets/hand_icon.svg";
-import cv_angel_es from "../../../assets/download/cv-angel-es.pdf";
-import cv_angel_en from "../../../assets/download/cv-angel-en.pdf";
+import cv_angel_es from "../../../assets/download/cv_angel_morales_es.pdf";
+import cv_angel_en from "../../../assets/download/cv_angel_morales_en.pdf";
 
 const Home = () => {
   const {
